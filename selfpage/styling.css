@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: url("C:\Users\aryan\OneDrive\Desktop\VSC\html vsc\resume_bootstrap\GraphicUX.com BD Supper Font\BD-Supper\BDSupperRegular.otf") format('truetype');
+    /* You can include multiple src lines for different file formats */
+}
+nav{
+    width: 100%; /* Make container full width */
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
+    
+}
+.footer{
+    width: 100%; /* Make container full width */
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
+}
+.active{
+    font-size : 16px;
+}
+.active:hover{
+    cursor:context-menu;
+}
+
+.current{
+    text-decoration: overline orange 1.5px;
+  animation:step-end 20s;
+}
+
+.iconsSelf {
+    font-size: 130%;
+    transition: 0.15s ease-in-out;
+}
+
+.iconsSelf:hover {
+    text-shadow: 0.1px 0.1px 5px orange;
+    font-size: 165%;
+    transition: 0.35s ease-out;
+}
+.accordion-button:after{
+    content: "";
+  background: darkcyan;
+  border-radius: 100%;
+  /* display: flex; */
+  position:relative;
+  opacity: 0.75;
+  transition: all 0.5s
+}
+.instLink {
+    text-decoration: none;
+    color: black;
+}
+
+.instLink:hover {
+    text-decoration: underline;
+    color: blue;
+}
+.resumeDownload{
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    border-bottom: 0;border-right: 0;
+}
+.resumeDownload:hover{
+    border-top: none;
+    background-color: rgb(14, 84, 110);
+    color: white;
+}
+.educationInfo{
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .card{
+        min-width: 0;
+        max-width: 0;
+        max-height: 0;
+    }
+    .card-title{
+        font-size: 0px;
+    }
+    .card-body{
+        font-size: 0.0001px;
+    }
+    .card-button{
+        opacity: 0;
+        size: 0px;
+    }
+    .contInfo{
+        margin-right: 0%;
+        padding-right: 0%;
+        min-width: 30%;
+    }
+    .aboutMe{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    /* .eduTable{
+        
+    } */
+    .sideEdu{
+        max-width:2.5%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .sideEdu{
+        max-width: 0;
+    }
+    .educationInfo{
+        max-width: 100px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .sideEdu{
+        max-width: 0;
+    }
+    .educationInfo{
+        max-width: 75px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 767.5px) {
+    
+    .imagesSection{
+        display: none;
+    }
+    .feedForm{
+        padding-left: 15%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .iitkResident{
+        display: none;
+    }
+}
