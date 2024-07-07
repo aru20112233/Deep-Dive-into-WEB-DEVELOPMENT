@@ -1,0 +1,104 @@
+*{
+  max-width: 100%;
+}
+.logo-text {
+    opacity: 0;
+    color: black;
+    margin-left: 10px;
+    transition: opacity 1s ease-in-out;
+  }
+  .navbar{
+    transition: background-color 0.3s ease;
+  }
+  /* Show text on hover */
+  .navbar:hover .logo-text {
+    opacity: 1;
+  }
+  .nav-link{
+    position: relative;
+    display: inline-block;
+    color: black;
+  }
+
+.animated-text{
+  transform: translateY(-90%);
+  animation: slide-in 1.2s ease forwards, fade-in 3.2s ease-in forwards;
+}
+  @keyframes slide-in {
+    from {
+      left: 350%;
+      opacity: 0;
+    }
+    to {
+      opacity: 0.05;
+      left: 50%;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0.05;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+  /* underline effect */
+  .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: aliceblue ; /* Color of the underline */
+    transform: scaleX(0); /* Initial state: no underline */
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform-origin: bottom left; /* Set transform origin */
+  }
+  .nav-link:hover::before{
+    transform: scaleX(1); /* Extend underline on hover */
+    transform-origin: bottom right;
+    font-size: 105%;
+  }.footer{
+    width: 100%; /* Make container full width */
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
+    opacity: 0.85;
+}
+@media only screen and (max-width: 900px) {
+ .fb-page{
+  display: none;
+ }
+}
+@media only screen and (max-width: 900px) {
+.IITK{
+  display: none;
+ }
+}
+@media only screen and (max-width: 900px) {
+  .col-8{
+    min-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    overflow: hidden;
+   }
+  }
+
+
+  #counter {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
